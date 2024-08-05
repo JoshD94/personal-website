@@ -77,7 +77,8 @@ function Header() {
     <div className="header">
       <div className="title">Hi! I'm Joshua Dirga</div>
       <div className="subtitle">
-        A software engineer eager to learn and build useful solutions
+        A software engineer eager to learn and build useful solutions. Currently
+        a sophomore at Cornell University.
       </div>
 
       <div className="dropdown-div">
