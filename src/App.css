@@ -1,0 +1,161 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(cascadia-code/Cascadia.ttf);
+}
+
+.App {
+  text-align: center;
+  font-family: myFirstFont;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.braces {
+  color: yellow;
+}
+
+.dropdown-div {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  padding: 1vh;
+}
+
+.file:hover, .item:hover {
+  background-color: #2d2d30;
+}
+
+.files {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.file-div {
+  width: 100%;
+  border-left: solid #3e3e42 1.5px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+  padding-left: 1vh;
+}
+
+.file-description {
+  font-size: 2vh;
+  text-align: left;
+  margin-left: 1.5vh;
+}
+
+.file-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.file-level {
+  margin-left: auto;
+}
+
+.file-title {
+  font-size: 2.5vh;
+  text-align: left;
+  margin-left: 1.5vh;
+}
+
+.filetype-image, .item-image {
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+}
+
+.header {
+  margin: 3vh;
+  width: 40vw;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  padding: 1vh;
+}
+
+.item-title {
+  font-size: 2.5vh;
+  text-align: left;
+  margin-left: 1.5vh;
+}
+
+.item-level {
+  margin-left: auto;
+}
+
+.resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vh;
+  width: fit-content;
+  height: 5vh;
+}
+
+.resume:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.src {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  background-color: #2d2d30;
+  width: 40vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+
+.src-text {
+  margin-left: 0.5vh;
+}
+
+.subtitle {
+  font-size: 2.5vh;
+  text-align: justify;
+}
+
+.star {
+  width: 2vh;
+  height: 2vh;
+  margin-right: 0.5vh;
+}
+
+.star-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 1vh;
+}
