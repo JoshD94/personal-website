@@ -28,6 +28,14 @@
   justify-content: center;
 }
 
+.footer {
+  color: #3e3e42;
+  font-size: 2vh;
+  bottom: 0;
+  justify-content: end;
+  align-items: end;
+}
+
 .file {
   display: flex;
   flex-direction: row;
@@ -158,4 +166,10 @@
 .title {
   font-size: 2.4rem;
   margin-bottom: 1vh;
+}
+
+.vscode {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-right: 0.5vh;
 }

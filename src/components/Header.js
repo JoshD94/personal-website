@@ -67,6 +67,33 @@ function Header() {
       filetype: "tedx",
     },
   ];
+  const hobbies = [
+    {
+      title: "Basketball",
+      description: "A good workout with friends",
+      filetype: "basketball",
+    },
+    {
+      title: "Tennis",
+      description: "My family sport",
+      filetype: "tennis",
+    },
+    {
+      title: "Piano",
+      description: "Covering my favorite songs",
+      filetype: "piano",
+    },
+    {
+      title: "Google Reviewing",
+      description: "A level 5 local guide in my free time",
+      filetype: "review",
+    },
+    {
+      title: "Learning languages",
+      description: "Japanese and Korean!",
+      filetype: "langauge",
+    },
+  ];
 
   const [showProjects, setShowProjects] = React.useState(true);
   const [showInternships, setShowInternships] = React.useState(true);
@@ -118,7 +145,11 @@ function Header() {
           ) : null}
         </div>
       </div>
-
+      {
+        //TODO: add hobbies page and links to linked in and github at the bottom and contacts
+        //TODO: add details afterwards
+        //TODO: add animation to dropdown
+      }
       <div className="dropdown-div">
         <div onClickCapture={() => setShowProjects(!showProjects)}>
           {showProjects ? (
@@ -142,7 +173,6 @@ function Header() {
           </div>
         ) : null}
       </div>
-
       <div className="dropdown-div">
         <div onClickCapture={() => setShowLanguages(!showLanguages)}>
           {showLanguages ? (
@@ -161,7 +191,6 @@ function Header() {
           </div>
         ) : null}
       </div>
-
       <div className="dropdown-div">
         <div onClickCapture={() => setShowActivities(!showActivities)}>
           {showActivities ? (
