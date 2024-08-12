@@ -1,20 +1,35 @@
 import "./App.css";
 import Header from "./components/Header";
+import { useState } from "react";
+import Info from "./components/Info";
 
 function App() {
+  const [openFile, setOpenFile] = useState("");
+  function openFileFunction(title) {
+    document.getElementById("info-div").scrollTo(0, 0);
+    if (openFile === "") {
+      document.getElementById("header").classList.toggle("transition");
+      setOpenFile(title);
+      document.getElementById("info-div").classList.toggle("hidden");
+    } else {
+      if (title === openFile) {
+        document.getElementById("header").classList.toggle("transition");
+        document.getElementById("info-div").classList.toggle("hidden");
+        setTimeout(() => {
+          setOpenFile("");
+        }, 500);
+      } else {
+        document.getElementById("info-div").classList.toggle("hidden");
+        setOpenFile(title);
+        document.getElementById("info-div").classList.toggle("hidden");
+      }
+    }
+  }
   return (
-    <div className="App">
-      <Header />
-      <div className="footer">
-        Joshua Dirga 2024
-        <br></br>
-        This website was heavily inspired by{" "}
-        <img
-          src={require("./images/vscode.png")}
-          className="vscode"
-          alt="VS Code"
-        ></img>
-        VS Code
+    <div id="app">
+      <Header openFileFunction={openFileFunction} />
+      <div>
+        <Info title={openFile} />
       </div>
     </div>
   );

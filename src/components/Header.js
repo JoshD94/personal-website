@@ -4,7 +4,7 @@ import Item from "./Item";
 import Src from "./Src";
 import Nosrc from "./Nosrc";
 
-function Header() {
+function Header({ openFileFunction }) {
   const projects = [
     {
       title: "Edukasih",
@@ -100,8 +100,12 @@ function Header() {
   const [showLanguages, setShowLanguages] = React.useState(true);
   const [showActivities, setShowActivities] = React.useState(true);
 
+  function sendToApp(file) {
+    openFileFunction(file);
+  }
+
   return (
-    <div className="header">
+    <div className="header" id="header">
       <div className="title">Hi! I'm Joshua Dirga</div>
       <div className="subtitle">
         A software engineer eager to learn and build useful solutions. Currently
@@ -133,12 +137,14 @@ function Header() {
             <div className="files">
               <div className="file-div">
                 {internships.map((f) => (
-                  <File
-                    key={f.title}
-                    text={f.title}
-                    description={f.description}
-                    filetype={f.filetype}
-                  />
+                  <div onClick={() => sendToApp(f.title)}>
+                    <File
+                      key={f.title}
+                      text={f.title}
+                      description={f.description}
+                      filetype={f.filetype}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -149,6 +155,7 @@ function Header() {
         //TODO: add hobbies page and links to linked in and github at the bottom and contacts
         //TODO: add details afterwards
         //TODO: add animation to dropdown
+        //TODO: add bio like picture, age, etc
       }
       <div className="dropdown-div">
         <div onClickCapture={() => setShowProjects(!showProjects)}>
@@ -191,6 +198,7 @@ function Header() {
           </div>
         ) : null}
       </div>
+
       <div className="dropdown-div">
         <div onClickCapture={() => setShowActivities(!showActivities)}>
           {showActivities ? (
@@ -213,6 +221,18 @@ function Header() {
             </div>
           </div>
         ) : null}
+      </div>
+
+      <div className="footer">
+        Joshua Dirga 2024
+        <br></br>
+        This website was heavily inspired by{" "}
+        <img
+          src={require("../images/vscode.png")}
+          className="vscode"
+          alt="VS Code"
+        ></img>
+        VS Code
       </div>
     </div>
   );
