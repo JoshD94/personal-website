@@ -8,6 +8,11 @@ import goto from "../images/goto.png";
 import trim from "../images/trim.png";
 import iac from "../images/iac.png";
 import tedx from "../images/tedx.png";
+import basketball from "../images/basketball.png";
+import piano from "../images/piano.png";
+import tennis from "../images/tennis.png";
+import language from "../images/language.png";
+import review from "../images/review.png";
 
 function File(file) {
   const images = {
@@ -20,6 +25,11 @@ function File(file) {
     ccra: ccra,
     iac: iac,
     tedx: tedx,
+    basketball: basketball,
+    piano: piano,
+    tennis: tennis,
+    language: language,
+    review: review,
   };
 
   return (

@@ -70,7 +70,7 @@ function Header({ openFileFunction }) {
   const hobbies = [
     {
       title: "Basketball",
-      description: "A good workout with friends",
+      description: "Pickup games with friends",
       filetype: "basketball",
     },
     {
@@ -85,13 +85,13 @@ function Header({ openFileFunction }) {
     },
     {
       title: "Google Reviewing",
-      description: "A level 5 local guide in my free time",
+      description: "A level 6 local guide in my free time",
       filetype: "review",
     },
     {
-      title: "Learning languages",
+      title: "Learning Languages",
       description: "Japanese and Korean!",
-      filetype: "langauge",
+      filetype: "language",
     },
   ];
 
@@ -99,6 +99,7 @@ function Header({ openFileFunction }) {
   const [showInternships, setShowInternships] = React.useState(true);
   const [showLanguages, setShowLanguages] = React.useState(true);
   const [showActivities, setShowActivities] = React.useState(true);
+  const [showHobbies, setShowHobbies] = React.useState(true);
 
   function sendToApp(file) {
     openFileFunction(file);
@@ -217,6 +218,28 @@ function Header({ openFileFunction }) {
                   description={f.description}
                   filetype={f.filetype}
                 />
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      <div className="dropdown-div">
+        <div onClickCapture={() => setShowHobbies(!showHobbies)}>
+          {showHobbies ? <Src text={"hobbies"} /> : <Nosrc text={"hobbies"} />}
+        </div>
+        {showHobbies ? (
+          <div className="files">
+            <div className="file-div">
+              {hobbies.map((f) => (
+                <div onClick={() => sendToApp(f.title)}>
+                  <File
+                    key={f.title}
+                    text={f.title}
+                    description={f.description}
+                    filetype={f.filetype}
+                  />
+                </div>
               ))}
             </div>
           </div>

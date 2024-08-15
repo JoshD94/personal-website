@@ -2,6 +2,11 @@ import React from "react";
 import RightChevron from "./RightChevron";
 import Goto from "./pages/Goto";
 import Trim from "./pages/Trim";
+import Basketball from "./pages/Basketball";
+import Tennis from "./pages/Tennis";
+import Piano from "./pages/Piano";
+import Review from "./pages/Review";
+import Language from "./pages/Language";
 
 function Info(props) {
   const data = {
@@ -26,6 +31,66 @@ function Info(props) {
         </div>
       ),
       page: <Trim id="content" />,
+    },
+    Basketball: {
+      path: (
+        <div className="src-bar">
+          src
+          <RightChevron />
+          Hobbies
+          <RightChevron />
+          Basketball
+        </div>
+      ),
+      page: <Basketball id="content" />,
+    },
+    Tennis: {
+      path: (
+        <div className="src-bar">
+          src
+          <RightChevron />
+          Hobbies
+          <RightChevron />
+          Tennis
+        </div>
+      ),
+      page: <Tennis id="content" />,
+    },
+    Piano: {
+      path: (
+        <div className="src-bar">
+          src
+          <RightChevron />
+          Hobbies
+          <RightChevron />
+          Piano
+        </div>
+      ),
+      page: <Piano id="content" />,
+    },
+    "Google Reviewing": {
+      path: (
+        <div className="src-bar">
+          src
+          <RightChevron />
+          Hobbies
+          <RightChevron />
+          Google Reviewing
+        </div>
+      ),
+      page: <Review id="content" />,
+    },
+    "Learning Languages": {
+      path: (
+        <div className="src-bar">
+          src
+          <RightChevron />
+          Hobbies
+          <RightChevron />
+          Learning Languages
+        </div>
+      ),
+      page: <Language id="content" />,
     },
   };
   const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
