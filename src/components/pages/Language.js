@@ -40,7 +40,11 @@ function Language() {
       </div>
 
       <div className="goto-body">
-        <img className="language-image" src={language1} />
+        <img
+          className="language-image"
+          src={language1}
+          alt="my duolingo streak"
+        />
         <div className="goto-caption">My streak as of August 12, 2024</div>
 
         <div className="goto-essay">
