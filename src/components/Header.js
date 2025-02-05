@@ -118,7 +118,7 @@ function Header({ openFileFunction }) {
           className="resume"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1G2XkE5kycdvZZ4RxFHyFcCeyfue5yEDJ/view?usp=drive_link"
+              "https://drive.google.com/file/d/1kmCDxLorwSFpaZdFwrv-PmkSRMAXD9MU/view"
             )
           }
         >
